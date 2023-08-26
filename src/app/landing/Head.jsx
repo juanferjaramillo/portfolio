@@ -69,7 +69,7 @@ export default function Head(props) {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <InfoIcon sx={{ color: "white" }}/>
+              <InfoIcon sx={{ color: "white" }} />
             </ListItemIcon>
             <ListItemText>About me</ListItemText>
           </ListItemButton>

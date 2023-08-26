@@ -14,7 +14,9 @@ export default function Landing() {
   };
   return (
     <Grid container className={style.container}>
-      <Grid item className={darkMode ? style.headDark : style.headLight}>
+      <Grid item className={darkMode ? style.headDark : style.headLight}
+      
+      >
         <Head />
       </Grid>
 
