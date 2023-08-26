@@ -1,0 +1,55 @@
+$cold1: #8ecae6;
+$cold2: #219ebc;
+$cold3: #023047;
+$warm1: #ffb703;
+$warm2: #fb8500;
+
+.container {
+  display: flex;
+}
+
+.headLight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+  height: 100vh;
+  width: 40vw;
+  margin: 0;
+  background-color: $cold2;
+  color: $warm1;
+  border-right: 2;
+  border-color: darkblue;
+}
+
+.headDark{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+  height: 100vh;
+  width: 40vw;
+  margin: 0;
+  background-color: $cold2;
+  color: $cold3;
+  border-right: 2;
+  border-color: darkblue;
+}
+
+.bodLight {
+  display: flex;
+  flex: 8;
+  height: 100vh;
+  width: 60vw;
+  background-color: $cold1;
+  color: $warm2;
+}
+
+.bodDark {
+  display: flex;
+  flex: 8;
+  height: 100vh;
+  width: 60vw;
+  background-color: $cold3;
+  color: $cold1;
+}

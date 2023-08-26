@@ -1,0 +1,25 @@
+
+.container {
+    display: flex;
+}
+
+.head {
+    display: flex;
+    flex: 2;
+    height: 100vh;
+    width: 40vw;
+    margin: 0;
+    background-color:dodgerblue;
+    color:white;
+    border-right: 2;
+    border-color: darkblue;
+}
+
+.bod {
+    display: flex;
+    flex: 8 ;
+    height: 100vh;
+    width: 60vw;
+    background-color: lavender;
+    color:navy;
+}
