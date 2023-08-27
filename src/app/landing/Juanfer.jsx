@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import WhatIDo from "./WhatIDo";
 import Projects from "./Projects";
+import Image from "next/image";
 
 export default function Juanfer(props) {
   return (
@@ -46,7 +47,7 @@ export default function Juanfer(props) {
             Full Stack Javascript Developer
           </Typography>
           <Typography fontSize={15} marginTop={5}>
-            I'm a software engineer specialised in frontend and backend
+            I am a software engineer specialised in frontend and backend
             development for complex scalable web apps. I write about software
             development on my blog. Want to know how I may help your project?
             Check out my project portfolio and online resume.
@@ -65,7 +66,7 @@ export default function Juanfer(props) {
           marginRight={12}
           boxShadow={3}
         >
-          <img
+          <Image
             alt="juanfer"
             src="https://res.cloudinary.com/sthemma/image/upload/v1693092924/PortfolioJFJ/Juanfer1.jpg"
             width={"100%"}

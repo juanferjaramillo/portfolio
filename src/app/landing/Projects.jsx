@@ -1,5 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import Link from "next/link";
+import Image from "next/image"
 
 export default function Projects() {
   return (
@@ -41,7 +42,7 @@ export default function Projects() {
               //image 1
               height={"30vh"}
             >
-              <img
+              <Image
                 src="https://res.cloudinary.com/sthemma/image/upload/v1687742453/calixto/Tarjeta1.jpg"
                 style={{ objectFit: "contain" }}
                 height={"100%"}
@@ -83,7 +84,7 @@ export default function Projects() {
               //image 1
               height={"30vh"}
             >
-              <img
+              <Image
                 src="https://res.cloudinary.com/sthemma/image/upload/v1687742453/calixto/Tarjeta1.jpg"
                 style={{ objectFit: "contain" }}
                 height={"100%"}
@@ -125,7 +126,7 @@ export default function Projects() {
               //image 1
               height={"30vh"}
             >
-              <img
+              <Image
                 src="https://res.cloudinary.com/sthemma/image/upload/v1687742453/calixto/Tarjeta1.jpg"
                 style={{ objectFit: "contain" }}
                 height={"100%"}
