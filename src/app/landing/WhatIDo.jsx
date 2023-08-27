@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import Image from 'next/image'
 
 export default function WhatIDo() {
   return (
@@ -38,10 +39,11 @@ export default function WhatIDo() {
           alignItems={"center"}
           width={150}
         >
-          <img
-            style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/JS.jpg"
+          <Image
+            // style={{ objectFit: "contain" }}
+            height={40}
+            width={40}
+            src="JS.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Vanilla Javascript
@@ -57,10 +59,11 @@ export default function WhatIDo() {
           alignItems={"center"}
           width={150}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693105392/PortfolioJFJ/react-1-logo.png"
+            height={40}
+            width={40}
+            src="react-1-logo.png"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             React.js
@@ -76,10 +79,11 @@ export default function WhatIDo() {
           alignItems={"center"}
           width={150}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/Next.jpg"
+            height={40}
+            width={40}
+            src="Next.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Next.js
@@ -95,10 +99,11 @@ export default function WhatIDo() {
           alignItems={"center"}
           width={150}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/MUI.jpg"
+            height={40}
+            width={40}
+            src="MUI.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             MUI
@@ -127,10 +132,11 @@ export default function WhatIDo() {
           alignItems={"center"}
           width={150}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/Redux.jpg"
+            height={40}
+            width={40}
+            src="Redux.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Redux.js
@@ -146,10 +152,11 @@ export default function WhatIDo() {
           alignItems={"center"}
           width={150}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092903/PortfolioJFJ/Express.jpg"
+            height={40}
+            width={40}
+            src="Express.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Express.js
@@ -165,10 +172,11 @@ export default function WhatIDo() {
           alignItems={"center"}
           width={150}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/Sequelize.jpg"
+            height={40}
+            width={40}
+            src="Sequelize.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Sequelize.js
@@ -184,10 +192,11 @@ export default function WhatIDo() {
           alignItems={"center"}
           width={150}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/Node.jpg"
+            height={40}
+            width={40}
+            src="Node.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Node.js

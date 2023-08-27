@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -25,48 +25,48 @@ export default function Projects() {
         width={"100%"}
         sx={{ mt: 3, mb: 3, pr: 7, pl: 7 }}
       >
-    
-          <Grid
-            item
-            // project
-            display={"flex"}
-            flexDirection={"row"}
-            alignItems={"center"}
-            width={"23vw"}
-            height={"30vh"}
-            boxShadow={8}
-          >
-             <Link href="">
+        <Grid
+          item
+          // project
+          display={"flex"}
+          flexDirection={"row"}
+          alignItems={"center"}
+          width={"23vw"}
+          //height={"30vh"}
+          boxShadow={8}
+        >
+          <Link href="">
             <Grid
               item
               //image 1
-              height={"30vh"}
+              //height={"30vh"}
             >
               <Image
-                src="https://res.cloudinary.com/sthemma/image/upload/v1687742453/calixto/Tarjeta1.jpg"
+                alt="card"
+                src="Tarjeta1.jpg"
                 style={{ objectFit: "contain" }}
-                height={"100%"}
+                height={195}
+                width={120}
               />
             </Grid>
-            </Link>
-            <Grid
-              item
-              display={"flex"}
-              flexDirection={"column"}
-              alignItems={"center"}
-              justifyContent={"flex-start"}
-              height={"100%"}
-            >
-              <Typography fontSize={20}>Calixto</Typography>
-              <Typography sx={{ pl: 2 }}>
-                Dinamic product portfolio with user app and admin dashboard
-              </Typography>
-              <Typography mt={4} fontSize={12}>
-                Client: Sthemma (Col.)
-              </Typography>
-            </Grid>
+          </Link>
+          <Grid
+            item
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            justifyContent={"flex-start"}
+            height={"100%"}
+          >
+            <Typography fontSize={20}>Calixto</Typography>
+            <Typography sx={{ pl: 2 }}>
+              Dinamic product portfolio with user app and admin dashboard
+            </Typography>
+            <Typography mt={4} fontSize={12}>
+              Client: Sthemma (Col.)
+            </Typography>
           </Grid>
-     
+        </Grid>
 
         <Grid
           item
@@ -75,19 +75,21 @@ export default function Projects() {
           flexDirection={"row"}
           alignItems={"center"}
           width={"23vw"}
-          height={"30vh"}
+          //height={"30vh"}
           boxShadow={8}
         >
           <Link href="">
             <Grid
               item
               //image 1
-              height={"30vh"}
+              //height={"30vh"}
             >
               <Image
-                src="https://res.cloudinary.com/sthemma/image/upload/v1687742453/calixto/Tarjeta1.jpg"
+                alt="card"
+                src="Tarjeta1.jpg"
                 style={{ objectFit: "contain" }}
-                height={"100%"}
+                height={195}
+                width={120}
               />
             </Grid>
           </Link>
@@ -117,19 +119,21 @@ export default function Projects() {
           flexDirection={"row"}
           alignItems={"center"}
           width={"23vw"}
-          height={"30vh"}
+          //height={"30vh"}
           boxShadow={8}
         >
           <Link href="">
             <Grid
               item
               //image 1
-              height={"30vh"}
+              // height={"30vh"}
             >
               <Image
-                src="https://res.cloudinary.com/sthemma/image/upload/v1687742453/calixto/Tarjeta1.jpg"
+                alt="card"
+                src="Tarjeta1.jpg"
                 style={{ objectFit: "contain" }}
-                height={"100%"}
+                height={195}
+                width={120}
               />
             </Grid>
           </Link>

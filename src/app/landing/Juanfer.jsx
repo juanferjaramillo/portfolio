@@ -62,15 +62,18 @@ export default function Juanfer(props) {
         <Grid
           item
           //Picture
-          width={"30%"}
+          // width={"30%"}
           marginRight={12}
           boxShadow={3}
         >
           <Image
             alt="juanfer"
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092924/PortfolioJFJ/Juanfer1.jpg"
-            width={"100%"}
-          />
+            src="Juanfer1.jpg"
+            width={300}
+            height={300}
+            style={{objectFit:"contain"}}
+         
+         />
         </Grid>
       </Grid>
 
