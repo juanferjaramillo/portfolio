@@ -1,8 +1,8 @@
-$cold1: #8ecae6;
-$cold2: #219ebc;
-$cold3: #023047;
-$warm1: #ffb703;
-$warm2: #fb8500;
+$cold1: #598392;
+$cold2: #124559;
+$cold3: #01161e;
+$warm1: #eff6e0;
+$warm2: #aec3b0;
 
 .container {
   display: flex;
@@ -14,12 +14,24 @@ $warm2: #fb8500;
   align-items: center;
   flex: 2;
   height: 100vh;
-  width: 40vw;
+  width: 20vw;
   margin: 0;
-  background-color: $cold2;
-  color: $warm1;
+  background-color: $warm2;
+  color: $cold2;
   border-right: 2;
   border-color: darkblue;
+  position: fixed;
+}
+
+.bodLight {
+  display: flex;
+  flex: 8;
+  margin-left: 20vw;
+  width: 80vw;
+  background-color: $warm1;
+  color: $cold3;
+  position: absolute;
+  right:0
 }
 
 .headDark{
@@ -28,28 +40,22 @@ $warm2: #fb8500;
   align-items: center;
   flex: 2;
   height: 100vh;
-  width: 40vw;
+  width: 20vw;
   margin: 0;
   background-color: $cold2;
-  color: $cold3;
+  color: $warm2;
   border-right: 2;
   border-color: darkblue;
-}
-
-.bodLight {
-  display: flex;
-  flex: 8;
-  height: 100vh;
-  width: 60vw;
-  background-color: $cold1;
-  color: $warm2;
+  position: fixed;
 }
 
 .bodDark {
   display: flex;
   flex: 8;
-  height: 100vh;
-  width: 60vw;
+  // margin-left: 20vw;
+  width: 80vw;
   background-color: $cold3;
   color: $cold1;
+  position: absolute;
+  right:0
 }

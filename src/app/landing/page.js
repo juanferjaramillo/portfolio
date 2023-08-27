@@ -14,14 +14,15 @@ export default function Landing() {
   };
   return (
     <Grid container className={style.container}>
-      <Grid item className={darkMode ? style.headDark : style.headLight}>
-        <Head />
+      <Grid item className={darkMode ? style.headDark : style.headLight}
+      >
+        <Head mode={handleChangeDarkMode}/>
       </Grid>
 
       <Grid item 
       className={darkMode ? style.bodDark : style.bodLight}
       >
-        <Juanfer mode={handleChangeDarkMode} />
+        <Juanfer  />
       </Grid>
     </Grid>
   );
