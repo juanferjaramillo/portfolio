@@ -8,6 +8,7 @@ import {
   ListItemIcon,
   ListItemText,
   Switch,
+  Tooltip
 } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import ComputerIcon from "@mui/icons-material/Computer";
@@ -37,6 +38,7 @@ export default function Head(props) {
 
       <Grid
         item
+        //social networks
         sx={{ width: "50%" }}
         display={"flex"}
         flexDirection={"row"}
@@ -44,6 +46,7 @@ export default function Head(props) {
         marginTop={3}
         marginBottom={1}
       >
+        <Tooltip title="My Github page">
         <Link href="https://github.com/juanferjaramillo"
         target="_blank"
         >
@@ -54,9 +57,12 @@ export default function Head(props) {
             backgroundColor: "black",
           }}
           src="https://res.cloudinary.com/sthemma/image/upload/v1693104405/PortfolioJFJ/github.jpg"
+          
         />
         </Link>
+        </Tooltip>
         
+        <Tooltip title="My Linkedin Page">
         <Link href="https://www.linkedin.com/in/juanferjaramillo/"
         target="_blank"
         >  
@@ -68,6 +74,7 @@ export default function Head(props) {
           src="https://res.cloudinary.com/sthemma/image/upload/v1693104528/PortfolioJFJ/Ln.png"
         />
       </Link>
+      </Tooltip>
    
       </Grid>
 
