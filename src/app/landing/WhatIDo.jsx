@@ -60,7 +60,7 @@ export default function WhatIDo() {
           <img
             style={{ objectFit: "contain" }}
             height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092903/PortfolioJFJ/React.jpg"
+            src="https://res.cloudinary.com/sthemma/image/upload/v1693105392/PortfolioJFJ/react-1-logo.png"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             React.js
