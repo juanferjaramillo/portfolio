@@ -4,8 +4,7 @@ import Image from "next/image";
 import { useStore } from "../../hooks/useStore";
 
 export default function Projects() {
-
-  const english = useStore((state)=>state.english)
+  const english = useStore((state) => state.english);
 
   return (
     <>
@@ -42,11 +41,11 @@ export default function Projects() {
           borderColor={"lightgray"}
         >
           <Link href="">
-          <Grid
+            <Grid
               item
               //image 1
-             display={"flex"}
-             alignItems={"flex-start"}
+              display={"flex"}
+              alignItems={"flex-start"}
             >
               <Image
                 alt="card"
@@ -66,12 +65,13 @@ export default function Projects() {
             height={"100%"}
           >
             <Typography fontSize={20}>Calixto</Typography>
-            <Typography fontSize={13} sx={{ pl: 2, mt:2, mb:4 }}>
-              {english ? "Dinamic product portfolio with user app and admin dashboard" :
-              "Portafolio de productos dinámico con app para usuario y un dashboard"}
+            <Typography fontSize={13} sx={{ pl: 2, mt: 2, mb: 4 }}>
+              {english
+                ? "Dinamic product portfolio with user app and admin dashboard"
+                : "Portafolio de productos dinámico con app para usuario y un dashboard"}
             </Typography>
             <Typography mt={4} fontSize={12}>
-            {english ? "Client" : "Cliente"}: SF GRoup (Col.)
+              {english ? "Client" : "Cliente"}: SF GRoup (Col.)
             </Typography>
           </Grid>
         </Grid>
@@ -88,11 +88,11 @@ export default function Projects() {
           borderColor={"lightgray"}
         >
           <Link href="">
-          <Grid
+            <Grid
               item
               //image 1
-             display={"flex"}
-             alignItems={"flex-start"}
+              display={"flex"}
+              alignItems={"flex-start"}
             >
               <Image
                 alt="card"
@@ -113,13 +113,16 @@ export default function Projects() {
             height={"100%"}
           >
             <Typography fontSize={20}>Aqui Estoy</Typography>
-            <Typography fontSize={13} sx={{ pl: 2, mt:2, mb:4 }}>
-            {english ? "Schedule app for Aquí Estoy Foundation (Arg.)" :
-            "App de agendamiento para la Fundacion Aquí Estoy (Arg."}
+            <Typography fontSize={13} sx={{ pl: 2, mt: 2, mb: 4 }}>
+              {english
+                ? "Schedule app for Aquí Estoy Foundation (Arg.)"
+                : "App de agendamiento para la Fundacion Aquí Estoy (Arg."}
             </Typography>
             <Typography mt={4} fontSize={12}>
-            {english ? "Client: Aquí Estoy Found. (Arg.)" : 
-            "Cliente: Fund. Aquí Estoy (Arg.)"}: 
+              {english
+                ? "Client: Aquí Estoy Found. (Arg.)"
+                : "Cliente: Fund. Aquí Estoy (Arg.)"}
+              :
             </Typography>
           </Grid>
         </Grid>
@@ -140,8 +143,8 @@ export default function Projects() {
             <Grid
               item
               //image 1
-             display={"flex"}
-             alignItems={"flex-start"}
+              display={"flex"}
+              alignItems={"flex-start"}
             >
               <Image
                 alt="card"
@@ -161,12 +164,13 @@ export default function Projects() {
             height={"100%"}
           >
             <Typography fontSize={20}>Pokedex</Typography>
-            <Typography fontSize={13} sx={{ pl: 2, mt:2, mb:6 }} fontSize={15}>
-              {english ? "Card game featuring Pokemon figures" :
-              "Juego de cartas con los personajes de Pokemón"}
+            <Typography fontSize={13} sx={{ pl: 2, mt: 2, mb: 6 }}>
+              {english
+                ? "Card game featuring Pokemon figures"
+                : "Juego de cartas con los personajes de Pokemón"}
             </Typography>
             <Typography mt={4} fontSize={12}>
-              {english ? "Client": "Cliente"}: Henry (Arg.)
+              {english ? "Client" : "Cliente"}: Henry (Arg.)
             </Typography>
           </Grid>
         </Grid>
