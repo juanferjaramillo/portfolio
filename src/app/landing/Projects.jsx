@@ -1,8 +1,12 @@
 import { Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
+import { useStore } from "../../hooks/useStore";
 
 export default function Projects() {
+
+  const english = useStore((state)=>state.english)
+
   return (
     <>
       <Grid
@@ -12,7 +16,7 @@ export default function Projects() {
         sx={{ mt: 3, pr: 10, pl: 10 }}
       >
         <Typography fontSize={25} sx={{ mb: 3 }}>
-          Featured Projects
+          {english ? "Featured Projects _" : "Proyectos Destacados _"}
         </Typography>
       </Grid>
 
@@ -23,7 +27,8 @@ export default function Projects() {
         flexDirection={"row"}
         justifyContent={"space-between"}
         width={"100%"}
-        sx={{ mt: 3, mb: 3, pr: 7, pl: 7 }}
+        wrap={"wrap"}
+        sx={{ mt: 3, mb: 3, pr: 5, pl: 5 }}
       >
         <Grid
           item
@@ -31,22 +36,24 @@ export default function Projects() {
           display={"flex"}
           flexDirection={"row"}
           alignItems={"center"}
-          width={"23vw"}
-          //height={"30vh"}
+          width={"22vw"}
           boxShadow={8}
+          border={1}
+          borderColor={"lightgray"}
         >
           <Link href="">
-            <Grid
+          <Grid
               item
               //image 1
-              //height={"30vh"}
+             display={"flex"}
+             alignItems={"flex-start"}
             >
               <Image
                 alt="card"
-                src="Tarjeta1.jpg"
+                src="TarjetaCalixto.jpg"
                 style={{ objectFit: "contain" }}
-                height={195}
-                width={120}
+                height={212}
+                width={132}
               />
             </Grid>
           </Link>
@@ -59,11 +66,12 @@ export default function Projects() {
             height={"100%"}
           >
             <Typography fontSize={20}>Calixto</Typography>
-            <Typography sx={{ pl: 2 }}>
-              Dinamic product portfolio with user app and admin dashboard
+            <Typography fontSize={13} sx={{ pl: 2, mt:2, mb:4 }}>
+              {english ? "Dinamic product portfolio with user app and admin dashboard" :
+              "Portafolio de productos dinámico con app para usuario y un dashboard"}
             </Typography>
             <Typography mt={4} fontSize={12}>
-              Client: Sthemma (Col.)
+            {english ? "Client" : "Cliente"}: SF GRoup (Col.)
             </Typography>
           </Grid>
         </Grid>
@@ -74,22 +82,24 @@ export default function Projects() {
           display={"flex"}
           flexDirection={"row"}
           alignItems={"center"}
-          width={"23vw"}
-          //height={"30vh"}
+          width={"22vw"}
           boxShadow={8}
+          border={1}
+          borderColor={"lightgray"}
         >
           <Link href="">
-            <Grid
+          <Grid
               item
               //image 1
-              //height={"30vh"}
+             display={"flex"}
+             alignItems={"flex-start"}
             >
               <Image
                 alt="card"
-                src="Tarjeta1.jpg"
+                src="TarjetaAqui.jpg"
                 style={{ objectFit: "contain" }}
-                height={195}
-                width={120}
+                height={212}
+                width={132}
               />
             </Grid>
           </Link>
@@ -103,11 +113,13 @@ export default function Projects() {
             height={"100%"}
           >
             <Typography fontSize={20}>Aqui Estoy</Typography>
-            <Typography sx={{ pl: 2 }}>
-              Schedule app for Aqui Estoy Foundation (Argentina)
+            <Typography fontSize={13} sx={{ pl: 2, mt:2, mb:4 }}>
+            {english ? "Schedule app for Aquí Estoy Foundation (Arg.)" :
+            "App de agendamiento para la Fundacion Aquí Estoy (Arg."}
             </Typography>
             <Typography mt={4} fontSize={12}>
-              Client: Aqui Estoy Found. (Arg.)
+            {english ? "Client: Aquí Estoy Found. (Arg.)" : 
+            "Cliente: Fund. Aquí Estoy (Arg.)"}: 
             </Typography>
           </Grid>
         </Grid>
@@ -118,22 +130,25 @@ export default function Projects() {
           display={"flex"}
           flexDirection={"row"}
           alignItems={"center"}
-          width={"23vw"}
+          width={"22vw"}
           //height={"30vh"}
           boxShadow={8}
+          border={1}
+          borderColor={"lightgray"}
         >
           <Link href="">
             <Grid
               item
               //image 1
-              // height={"30vh"}
+             display={"flex"}
+             alignItems={"flex-start"}
             >
               <Image
                 alt="card"
                 src="Tarjeta1.jpg"
                 style={{ objectFit: "contain" }}
-                height={195}
-                width={120}
+                height={212}
+                width={132}
               />
             </Grid>
           </Link>
@@ -146,11 +161,12 @@ export default function Projects() {
             height={"100%"}
           >
             <Typography fontSize={20}>Pokedex</Typography>
-            <Typography sx={{ pl: 2 }} fontSize={15}>
-              Card game featuring Pokemon figures
+            <Typography fontSize={13} sx={{ pl: 2, mt:2, mb:6 }} fontSize={15}>
+              {english ? "Card game featuring Pokemon figures" :
+              "Juego de cartas con los personajes de Pokemón"}
             </Typography>
             <Typography mt={4} fontSize={12}>
-              Client: Henry (Arg.)
+              {english ? "Client": "Cliente"}: Henry (Arg.)
             </Typography>
           </Grid>
         </Grid>
