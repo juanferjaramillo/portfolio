@@ -1,6 +1,10 @@
-import { Grid, Typography } from "@mui/material";
+import { Divider, Grid, Typography } from "@mui/material";
+import Image from 'next/image'
+import {useStore} from "../../hooks/useStore"
 
 export default function WhatIDo() {
+  const english = useStore((state)=>state.english);
+
   return (
     <>
       <Grid
@@ -10,13 +14,11 @@ export default function WhatIDo() {
         sx={{ mt: 3, pr: 10, pl: 10 }}
       >
         <Typography fontSize={25} sx={{ mb: 3 }}>
-          What I do
+          {english ? "What I do _" : "Lo que hago _"}
         </Typography>
         <Typography fontSize={15}>
-          I build software for clients all over the world. Below is a quick
-          overview of my main technical skill sets and technologies I use. Want
-          to find out more about my experience? Check out my online resume and
-          project portfolio.
+        {english ? "I build software in a creative way!. Below is a quick overview of my main technical skills and technologies I use. Check out my online resume and project portfolio."
+        :"Construyo soluciones creativas de software!. Abajo encuentras un resumen de mis capacidades técnicas, y las tecnologías que uso.  Encuentra tambien mi hoja de vida y mi portafolio."}
         </Typography>
       </Grid>
 
@@ -37,17 +39,21 @@ export default function WhatIDo() {
           flexDirection={"column"}
           alignItems={"center"}
           width={150}
+          height={130}
         >
-          <img
-            style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/JS.jpg"
+          <Image
+            // style={{ objectFit: "contain" }}
+            height={40}
+            width={40}
+            src="JS.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
-            Vanilla Javascript
+          {english ? "Vanilla Javascript" : "Javascript Vainilla"}
           </Typography>
           <Typography fontSize={12} textAlign={"center"}>
-            Simply Javascript for problem solving
+          <Divider color={"darkGrey"} />
+          {english ? "Simple Javascript for problem solving" :
+          "Simple Javascript para solución de problemas"}
           </Typography>
         </Grid>
         <Grid
@@ -56,17 +62,21 @@ export default function WhatIDo() {
           flexDirection={"column"}
           alignItems={"center"}
           width={150}
+          height={130}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693105392/PortfolioJFJ/react-1-logo.png"
+            height={40}
+            width={40}
+            src="react-1-logo.png"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
-            React.js
+            React
           </Typography>
           <Typography fontSize={12} textAlign={"center"}>
-            Simply React for problem solving
+           <Divider color={"darkGrey"} />
+            {english ? "Simply React for problem solving" :
+            "Simple React para solución de problemas"}
           </Typography>
         </Grid>
         <Grid
@@ -75,17 +85,20 @@ export default function WhatIDo() {
           flexDirection={"column"}
           alignItems={"center"}
           width={150}
+          height={130}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/Next.jpg"
+            height={40}
+            width={40}
+            src="Next.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
-            Next.js
+            Next
           </Typography>
           <Typography fontSize={12} textAlign={"center"}>
-            Simply Next for problem solving
+            <Divider color={"darkGrey"} />
+          {english ? "For pages SEO firendly" : "Para páginas amigas de SEO"}
           </Typography>
         </Grid>
         <Grid
@@ -94,17 +107,21 @@ export default function WhatIDo() {
           flexDirection={"column"}
           alignItems={"center"}
           width={150}
+          height={130}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/MUI.jpg"
+            height={40}
+            width={40}
+            src="MUI.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             MUI
           </Typography>
           <Typography fontSize={12} textAlign={"center"}>
-            Simply MUI for looking good
+          <Divider color={"darkGrey"} />
+            {english ? "Simply MUI for looking good" : 
+            "MUI para páginas que lucen bien"}
           </Typography>
         </Grid>
       </Grid>
@@ -115,7 +132,7 @@ export default function WhatIDo() {
         display={"flex"}
         flexDirection={"row"}
         justifyContent={"space-between"}
-        alignItems={"center"}
+        alignItems={"flex-start"}
         wrap={"wrap"}
         width={"80%"}
         padding={5}
@@ -126,17 +143,21 @@ export default function WhatIDo() {
           flexDirection={"column"}
           alignItems={"center"}
           width={150}
+          height={130}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/Redux.jpg"
+            height={40}
+            width={40}
+            src="Redux.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
-            Redux.js
+            Redux / Zustand
           </Typography>
           <Typography fontSize={12} textAlign={"center"}>
-            Simply Redux as a container
+          <Divider color={"darkGrey"} />
+            {english ? "Redux or Zustand as global containers" : 
+            "Redux o Zustand como contenedores globales"}
           </Typography>
         </Grid>
         <Grid
@@ -145,17 +166,21 @@ export default function WhatIDo() {
           flexDirection={"column"}
           alignItems={"center"}
           width={150}
+          height={130}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092903/PortfolioJFJ/Express.jpg"
+            height={40}
+            width={40}
+            src="Express.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
-            Express.js
+            Express
           </Typography>
           <Typography fontSize={12} textAlign={"center"}>
-            Simply Express for backing you up
+          <Divider color={"darkGrey"} />
+            {english ? "Simply Express for backing you up" : 
+            "Express para el back end"}
           </Typography>
         </Grid>
         <Grid
@@ -164,17 +189,21 @@ export default function WhatIDo() {
           flexDirection={"column"}
           alignItems={"center"}
           width={150}
+          height={130}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/Sequelize.jpg"
+            height={40}
+            width={40}
+            src="Sequelize.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
-            Sequelize.js
+            Sequelize + PostgreSQL
           </Typography>
           <Typography fontSize={12} textAlign={"center"}>
-            Simply Sequelize for databases
+          <Divider color={"darkGrey"} />
+            {english ? "ORM + SQL database" : 
+            "ORM + base de datos SQL"}
           </Typography>
         </Grid>
         <Grid
@@ -183,17 +212,21 @@ export default function WhatIDo() {
           flexDirection={"column"}
           alignItems={"center"}
           width={150}
+          height={130}
         >
-          <img
+          <Image
             style={{ objectFit: "contain" }}
-            height={30}
-            src="https://res.cloudinary.com/sthemma/image/upload/v1693092902/PortfolioJFJ/Node.jpg"
+            height={40}
+            width={40}
+            src="Node.jpg"
           />
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
-            Node.js
+            Node
           </Typography>
           <Typography fontSize={12} textAlign={"center"}>
-            Simply Node for max power
+          <Divider color={"darkGrey"} />
+            {english ? "Simply Node for max power" : 
+            "Node para maximo poder"}
           </Typography>
         </Grid>
       </Grid>
