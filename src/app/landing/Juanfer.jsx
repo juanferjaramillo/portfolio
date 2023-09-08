@@ -52,10 +52,10 @@ export default function Juanfer(props) {
               ? "I am a junior Full Stack Javascript developer always challenging my limits. Check out my project portfolio and online resume."
               : "Soy un desarrollador junior Full Stack en Javascript, siempre retándome a superar mis límites. Mira mi portafolio y mi hoja de vida en línea."}
           </Typography>
-          <Button variant="outlined" sx={{ mr: 4, mt: 2 }}>
+          <Button variant="contained" sx={{ mr: 4, mt: 2 }}>
           {english ? "My portfolio" : "Mi Portafolio"}
           </Button>
-          <Button variant="outlined" sx={{ mt: 2 }}>
+          <Button variant="contained" sx={{ mt: 2, backgroundColor:"darkcyan" }}>
           {english ? "My resume" : "Mi Hoja de Vida"}
           </Button>
         </Grid>
@@ -80,7 +80,7 @@ export default function Juanfer(props) {
       <WhatIDo english={props.english}/>
       <Divider width={"90%"} color={"grey"} sx={{ mt: 3 }} />
       <Projects english={props.english}/>
-      <Button variant="outlined">
+      <Button variant="contained">
       {english ? "My Portfolio" : "Mi Portafolio"}</Button>
       <Divider width={"90%"} color={"grey"} sx={{ mt: 3 }} />
       <Grid

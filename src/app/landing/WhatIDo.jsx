@@ -1,12 +1,12 @@
 import { Divider, Grid, Typography } from "@mui/material";
-import Image from 'next/image'
-import {useStore} from "../../hooks/useStore"
+import Image from "next/image";
+import { useStore } from "../../hooks/useStore";
 
 export default function WhatIDo() {
-  const english = useStore((state)=>state.english);
+  const english = useStore((state) => state.english);
 
   return (
-    <>
+    <Grid container flexDirection={"column"} alignItems={"center"}>
       <Grid
         item
         //second row
@@ -17,8 +17,9 @@ export default function WhatIDo() {
           {english ? "What I do _" : "Lo que hago _"}
         </Typography>
         <Typography fontSize={15}>
-        {english ? "I build software in a creative way!. Below is a quick overview of my main technical skills and technologies I use. Check out my online resume and project portfolio."
-        :"Construyo soluciones creativas de software!. Abajo encuentras un resumen de mis capacidades técnicas, y las tecnologías que uso.  Encuentra tambien mi hoja de vida y mi portafolio."}
+          {english
+            ? "I build software in a creative way!. Below is a quick overview of my main technical skills and technologies I use. Check out my online resume and project portfolio."
+            : "Construyo soluciones creativas de software!. Abajo encuentras un resumen de mis capacidades técnicas, y las tecnologías que uso.  Encuentra tambien mi hoja de vida y mi portafolio."}
         </Typography>
       </Grid>
 
@@ -31,7 +32,8 @@ export default function WhatIDo() {
         alignItems={"center"}
         wrap={"wrap"}
         width={"80%"}
-        padding={5}
+        sx={{pt:5}}
+        // padding={5}
       >
         <Grid
           item
@@ -47,13 +49,15 @@ export default function WhatIDo() {
             width={40}
             src="JS.jpg"
           />
+
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
-          {english ? "Vanilla Javascript" : "Javascript Vainilla"}
+            {english ? "Vanilla Javascript" : "Javascript Vainilla"}
           </Typography>
+          <Divider color={"darkGrey"} width={"100%"} />
           <Typography fontSize={12} textAlign={"center"}>
-          <Divider color={"darkGrey"} />
-          {english ? "Simple Javascript for problem solving" :
-          "Simple Javascript para solución de problemas"}
+            {english
+              ? "Simple Javascript for problem solving"
+              : "Simple Javascript para solución de problemas"}
           </Typography>
         </Grid>
         <Grid
@@ -73,10 +77,11 @@ export default function WhatIDo() {
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             React
           </Typography>
+            <Divider color={"darkGrey"} width={"100%"} />
           <Typography fontSize={12} textAlign={"center"}>
-           <Divider color={"darkGrey"} />
-            {english ? "Simply React for problem solving" :
-            "Simple React para solución de problemas"}
+            {english
+              ? "Simply React for problem solving"
+              : "Simple React para solución de problemas"}
           </Typography>
         </Grid>
         <Grid
@@ -96,9 +101,9 @@ export default function WhatIDo() {
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Next
           </Typography>
+          <Divider color={"darkGrey"} width={"100%"} />
           <Typography fontSize={12} textAlign={"center"}>
-            <Divider color={"darkGrey"} />
-          {english ? "For pages SEO firendly" : "Para páginas amigas de SEO"}
+            {english ? "For pages SEO firendly" : "Para páginas amigas de SEO"}
           </Typography>
         </Grid>
         <Grid
@@ -118,10 +123,11 @@ export default function WhatIDo() {
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             MUI
           </Typography>
+          <Divider color={"darkGrey"} width={"100%"} />
           <Typography fontSize={12} textAlign={"center"}>
-          <Divider color={"darkGrey"} />
-            {english ? "Simply MUI for looking good" : 
-            "MUI para páginas que lucen bien"}
+            {english
+              ? "Simply MUI for looking good"
+              : "MUI para páginas que lucen bien"}
           </Typography>
         </Grid>
       </Grid>
@@ -133,9 +139,9 @@ export default function WhatIDo() {
         flexDirection={"row"}
         justifyContent={"space-between"}
         alignItems={"flex-start"}
-        wrap={"wrap"}
         width={"80%"}
-        padding={5}
+        // sx={{pt:5}}
+        // padding={5}
       >
         <Grid
           item
@@ -154,10 +160,11 @@ export default function WhatIDo() {
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Redux / Zustand
           </Typography>
+          <Divider color={"darkGrey"} width={"100%"} />
           <Typography fontSize={12} textAlign={"center"}>
-          <Divider color={"darkGrey"} />
-            {english ? "Redux or Zustand as global containers" : 
-            "Redux o Zustand como contenedores globales"}
+            {english
+              ? "Redux or Zustand as global containers"
+              : "Redux o Zustand como contenedores globales"}
           </Typography>
         </Grid>
         <Grid
@@ -177,10 +184,11 @@ export default function WhatIDo() {
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Express
           </Typography>
+          <Divider color={"darkGrey"} width={"100%"} />
           <Typography fontSize={12} textAlign={"center"}>
-          <Divider color={"darkGrey"} />
-            {english ? "Simply Express for backing you up" : 
-            "Express para el back end"}
+            {english
+              ? "Simply Express for backing you up"
+              : "Express para el back end"}
           </Typography>
         </Grid>
         <Grid
@@ -200,10 +208,9 @@ export default function WhatIDo() {
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Sequelize + PostgreSQL
           </Typography>
+          <Divider color={"darkGrey"} width={"100%"} />
           <Typography fontSize={12} textAlign={"center"}>
-          <Divider color={"darkGrey"} />
-            {english ? "ORM + SQL database" : 
-            "ORM + base de datos SQL"}
+            {english ? "ORM + SQL database" : "ORM + base de datos SQL"}
           </Typography>
         </Grid>
         <Grid
@@ -223,13 +230,12 @@ export default function WhatIDo() {
           <Typography fontSize={15} textAlign={"center"} marginTop={1}>
             Node
           </Typography>
+          <Divider color={"darkGrey"} width={"100%"} />
           <Typography fontSize={12} textAlign={"center"}>
-          <Divider color={"darkGrey"} />
-            {english ? "Simply Node for max power" : 
-            "Node para maximo poder"}
+            {english ? "Simply Node for max power" : "Node para maximo poder"}
           </Typography>
         </Grid>
       </Grid>
-    </>
+    </Grid>
   );
 }

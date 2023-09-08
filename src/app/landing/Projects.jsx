@@ -7,7 +7,7 @@ export default function Projects() {
   const english = useStore((state) => state.english);
 
   return (
-    <>
+    <Grid container display={"flex"} flexDirection={"column"} alignItems={"center"} width={"100%"}>
       <Grid
         item
         //third row
@@ -28,6 +28,7 @@ export default function Projects() {
         width={"100%"}
         wrap={"wrap"}
         sx={{ mt: 3, mb: 3, pr: 5, pl: 5 }}
+  
       >
         <Grid
           item
@@ -175,6 +176,6 @@ export default function Projects() {
           </Grid>
         </Grid>
       </Grid>
-    </>
+    </Grid>
   );
 }

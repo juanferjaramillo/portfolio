@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Grid,
@@ -11,7 +11,7 @@ import {
   ListItemText,
   Switch,
   Tooltip,
-  Divider
+  Divider,
 } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import ComputerIcon from "@mui/icons-material/Computer";
@@ -20,15 +20,19 @@ import ArticleIcon from "@mui/icons-material/Article";
 import Link from "next/link";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import {useStore} from "../../hooks/useStore";
+import { useStore } from "../../hooks/useStore";
 
 export default function Head(props) {
-  const english = useStore((state)=>state.english);
+  const english = useStore((state) => state.english);
 
   return (
-    <Grid item display={"flex"} flexDirection={"column"} 
-    alignItems={"center"} 
-    sx={{width: "100%"}}>
+    <Grid
+      item
+      display={"flex"}
+      flexDirection={"column"}
+      alignItems={"center"}
+      sx={{ width: "100%"}}
+    >
       <Grid item marginBottom={3} marginTop={2}>
         <Typography fontSize={25}>Juanfer Dev</Typography>
       </Grid>
@@ -39,15 +43,19 @@ export default function Head(props) {
       ></Avatar>
 
       <Typography marginTop={1} textAlign={"center"} fontSize={"small"}>
-        {english ? "Hi. I am Juanfer Jaramillo" : "Hola, yo soy Juanfer Jaramillo" },
+        {english
+          ? "Hi. I am Juanfer Jaramillo"
+          : "Hola, yo soy Juanfer Jaramillo"}
+        ,
       </Typography>
       <Typography fontSize={"small"}>
-        {english ? "Full Stack Javascript Developer." : 
-        "Desarrollador Full Stack Javascript"}
+        {english
+          ? "Full Stack Javascript Developer."
+          : "Desarrollador Full Stack Javascript"}
       </Typography>
       <Typography fontSize={"small"}>
         {english ? "Welcome to my site!" : "Bienvenido a mi sitio!"}
-        </Typography>
+      </Typography>
 
       <Grid
         item
@@ -59,8 +67,7 @@ export default function Head(props) {
         marginTop={3}
         marginBottom={1}
       >
-        <Tooltip 
-        title={english ? "My Github page" : "Mi página Github"}>
+        <Tooltip title={english ? "My Github page" : "Mi página Github"}>
           <Link href="https://github.com/juanferjaramillo" target="_blank">
             <Avatar
               sx={{
@@ -73,8 +80,7 @@ export default function Head(props) {
           </Link>
         </Tooltip>
 
-        <Tooltip 
-        title={english ? "My Linkedin Page" : "Mi Linkedin"}>
+        <Tooltip title={english ? "My Linkedin Page" : "Mi Linkedin"}>
           <Link
             href="https://www.linkedin.com/in/juanferjaramillo/"
             target="_blank"
@@ -90,15 +96,15 @@ export default function Head(props) {
         </Tooltip>
       </Grid>
 
-      <List>
-        <ListItem disablePadding>
+      <List
+      dense
+      >
+        <ListItem disablePadding sx={{fontSize:8}}>
           <ListItemButton>
             <ListItemIcon>
               <InfoIcon sx={{ color: "white" }} />
             </ListItemIcon>
-            <ListItemText>
-              {english ? "About me" : "Acerca de mi"}
-              </ListItemText>
+            <ListItemText sx={{fontSize:8}}>{english ? "About me" : "Acerca de mi"}</ListItemText>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -106,8 +112,7 @@ export default function Head(props) {
             <ListItemIcon>
               <ComputerIcon sx={{ color: "white" }} />
             </ListItemIcon>
-            <ListItemText>
-              {english ? "Portfolio" : "Portafolio"}</ListItemText>
+            <ListItemText>{english ? "Portfolio" : "Portafolio"}</ListItemText>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -115,57 +120,66 @@ export default function Head(props) {
             <ListItemIcon>
               <ArticleIcon sx={{ color: "white" }} />
             </ListItemIcon>
-            <ListItemText>
-              {english ? "Resume" : "Hoja de Vida"}</ListItemText>
+            <ListItemText>{english ? "Resume" : "Hoja de Vida"}</ListItemText>
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem disablePadding 
+        >
           <ListItemButton>
             <ListItemIcon>
               <ContactPageIcon sx={{ color: "white" }} />
             </ListItemIcon>
-            <ListItemText>
-              {english ? "Contact me" : "Contáctame"}</ListItemText>
+            <ListItemText>{english ? "Contact me" : "Contáctame"}</ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
-
       <Divider width={"90%"} color={"grey"} />
 
-      <Grid
-        item
-        //the languages
-        display={"flex"}
-        flexDirection={"row"}
-        alignItems={"center"}
-        height={"7vh"}
-        position={"fixed"}
-        bottom={25}
-
-        // marginLeft={"68vw"}
+      <Grid 
+      display={"flex"}
+      flexDirection={"column"}
+      alignItems={"center"}
+      justifyContent={"space-around"}
+      width={"100%"}
+      height={"80px"}
+      position={"relative"}
+      sx={{mt:"30px"}}
+      // border={1}
       >
-        <Typography>English</Typography>
-        <Switch
-        onChange={useStore((state)=>state.english ? state.setSpanish : state.setEnglish)}
-        />
-        <Typography>Español</Typography>
-      </Grid>
+        <Grid
+          item
+          //the languages
+          display={"flex"}
+          flexDirection={"row"}
+          alignItems={"center"}
+          height={"7vh"}
+          position={"relative"}
+        >
+          <Typography>English</Typography>
+          <Switch
+            onChange={useStore((state) =>
+              state.english ? state.setSpanish : state.setEnglish
+            )}
+          />
+          <Typography>Español</Typography>
+        </Grid>
 
-      <Grid
-        item
-        //the darkmode switch
-        display={"flex"}
-        flexDirection={"row"}
-        alignItems={"center"}
-        height={"7vh"}
-        position={"fixed"}
-        bottom={0}
+        <Grid
+          item
+          //the darkmode switch
+          display={"flex"}
+          flexDirection={"row"}
+          alignItems={"center"}
+          height={"7vh"}
+          position={"relative"}
+          bottom={15}
 
-        // marginLeft={"68vw"}
-      >
-        <LightModeIcon />
-        <Switch onChange={() => props.mode()} />
-        <DarkModeIcon />
+          // marginLeft={"68vw"}
+        >
+          <LightModeIcon />
+          <Switch onChange={() => props.mode()} />
+          <DarkModeIcon />
+        </Grid>
       </Grid>
     </Grid>
   );

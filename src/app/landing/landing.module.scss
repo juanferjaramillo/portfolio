@@ -6,6 +6,8 @@ $warm2: #aec3b0;
 
 .container {
   display: flex;
+  // flex-direction: row;
+  // flex-wrap: nowrap;
 }
 
 .headLight {
@@ -15,6 +17,7 @@ $warm2: #aec3b0;
   flex: 2;
   height: 100vh;
   width: 23vw;
+  overflow-y: scroll;
   margin: 0;
   background-color: $warm2;
   color: $cold2;
@@ -26,7 +29,7 @@ $warm2: #aec3b0;
 .bodLight {
   display: flex;
   flex: 8;
-  margin-left: 20vw;
+  // margin-left: 20vw;
   width: 77vw;
   background-color: $warm1;
   color: $cold3;
@@ -39,14 +42,15 @@ $warm2: #aec3b0;
   flex-direction: column;
   align-items: flex-start;
   flex: 2;
-  height: 100vh;
   width: 23vw;
+  height: 100vh;
+  overflow-y: scroll;
   margin: 0;
   background-color: $cold2;
   color: $warm2;
   border-right: 2;
   border-color: darkblue;
-  position: fixed;
+  position:fixed;
 }
 
 .bodDark {
