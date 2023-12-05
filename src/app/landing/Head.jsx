@@ -29,9 +29,11 @@ export default function Head(props) {
     <Grid
       item
       display={"flex"}
+      //{{sm:"none", md:"flex"}}
       flexDirection={"column"}
       alignItems={"center"}
-      sx={{ width: "100%"}}
+      width={"100%"}
+      // sx={{ width: "100%"}}
     >
       <Grid item marginBottom={3} marginTop={2}>
         <Typography fontSize={25}>Juanfer Dev</Typography>
@@ -48,7 +50,7 @@ export default function Head(props) {
           : "Hola, yo soy Juanfer Jaramillo"}
         ,
       </Typography>
-      <Typography fontSize={"small"}>
+      <Typography fontSize={"small"} textAlign={"center"}>
         {english
           ? "Full Stack Javascript Developer."
           : "Desarrollador Full Stack Javascript"}
@@ -155,13 +157,14 @@ export default function Head(props) {
           height={"7vh"}
           position={"relative"}
         >
-          <Typography>English</Typography>
+          <Typography fontSize={"small"}>English</Typography>
           <Switch
+          size="small"
             onChange={useStore((state) =>
               state.english ? state.setSpanish : state.setEnglish
             )}
           />
-          <Typography>Español</Typography>
+          <Typography fontSize={"small"}>Español</Typography>
         </Grid>
 
         <Grid
@@ -176,9 +179,9 @@ export default function Head(props) {
 
           // marginLeft={"68vw"}
         >
-          <LightModeIcon />
-          <Switch onChange={() => props.mode()} />
-          <DarkModeIcon />
+          <LightModeIcon fontSize={"small"} />
+          <Switch size={"small"} onChange={() => props.mode()} />
+          <DarkModeIcon fontSize={"small"} />
         </Grid>
       </Grid>
     </Grid>

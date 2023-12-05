@@ -5,6 +5,7 @@ import Head from "./Head";
 import Juanfer from "./Juanfer";
 import style from "./landing.module.scss";
 import { useState } from "react";
+import HeadTop from "./HeadTop";
 
 export default function Landing() {
   const [darkMode, setDarkmode] = useState(false);
@@ -19,13 +20,16 @@ export default function Landing() {
   };
 
   return (
-    <Grid containter className={style.container}>
-      <Grid container className={darkMode ? style.headDark : style.headLight}>
+    <Grid containter display={"flex"}>
+      <Grid item className={darkMode ? style.headDark : style.headLight}>
         <Head mode={handleChangeDarkMode} />
       </Grid>
 
-      <Grid container className={darkMode ? style.bodDark : style.bodLight}>
+      <Grid item className={darkMode ? style.bodyDark : style.bodyLight}>
         <Juanfer />
+        <HeadTop
+        mode={handleChangeDarkMode}
+        />
       </Grid>
     </Grid>
   );

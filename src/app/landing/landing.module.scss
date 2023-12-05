@@ -6,15 +6,13 @@ $warm2: #aec3b0;
 
 .container {
   display: flex;
-  // flex-direction: row;
-  // flex-wrap: nowrap;
 }
 
 .headLight {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 2;
+  // flex: 3;
   height: 100vh;
   width: 23vw;
   overflow-y: scroll;
@@ -26,18 +24,26 @@ $warm2: #aec3b0;
   position: fixed;
 }
 
-.bodLight {
+.headTopLight {
+  background-color: $warm2;
+  width: 100vw;
+  height: 10vh;
+  position:fixed;
+  bottom:0
+}
+
+.bodyLight {
   display: flex;
-  flex: 8;
-  // margin-left: 20vw;
+  flex-direction: column;
   width: 77vw;
+  min-height: 100vh;
   background-color: $warm1;
   color: $cold3;
   position: absolute;
-  right:0
+  right: 0;
 }
 
-.headDark{
+.headDark {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -50,10 +56,10 @@ $warm2: #aec3b0;
   color: $warm2;
   border-right: 2;
   border-color: darkblue;
-  position:fixed;
+  position: fixed;
 }
 
-.bodDark {
+.bodyDark {
   display: flex;
   flex: 8;
   // margin-left: 20vw;
@@ -61,5 +67,20 @@ $warm2: #aec3b0;
   background-color: $cold3;
   color: $cold1;
   position: absolute;
-  right:0
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  .bodyLight {
+    width: 100vw;
+  }
+  .bodyDark {
+    width: 100vw;
+  }
+  .headLight {
+    width: 0vw;
+  }
+  .headDark {
+    width: 0vw;
+  }
 }

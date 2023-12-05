@@ -26,7 +26,7 @@ export default function Projects() {
         flexDirection={"row"}
         justifyContent={"space-between"}
         width={"100%"}
-        wrap={"wrap"}
+        // wrap={"wrap"}
         sx={{ mt: 3, mb: 3, pr: 5, pl: 5 }}
   
       >
@@ -164,14 +164,14 @@ export default function Projects() {
             justifyContent={"flex-start"}
             height={"100%"}
           >
-            <Typography fontSize={20}>Pokedex</Typography>
+            <Typography fontSize={20}>Calixto mobile - React Native</Typography>
             <Typography fontSize={13} sx={{ pl: 2, mt: 2, mb: 6 }}>
               {english
-                ? "Card game featuring Pokemon figures"
-                : "Juego de cartas con los personajes de Pokemón"}
+                ? "Mobile app for a commercial prdduct portfolio"
+                : "App de portafolio comercial para dispositivos móviles"}
             </Typography>
             <Typography mt={4} fontSize={12}>
-              {english ? "Client" : "Cliente"}: Henry (Arg.)
+              {english ? "Client" : "Cliente"}: SFGroup (Col.)
             </Typography>
           </Grid>
         </Grid>
